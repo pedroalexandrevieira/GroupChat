@@ -81,7 +81,7 @@ public class ChatServer {
     }
 
     public Set<String> getUserNames(){
-        return this.userNames;
+        return this.userNames ;
     }
 
 }
