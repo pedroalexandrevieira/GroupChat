@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 //This class is responsible for reading input from the user and sending
-// it to the server, continuously until the user types ‘dude, I´m out’ to end the chat.
+// it to the server, continuously until the user types ‘Dude, I´m out’ to end the chat.
 
 public class WriteThread {
 
@@ -45,7 +45,7 @@ public class WriteThread {
         do {
             text = console.readLine("[" + userName + "]: ");
             writer.println(text);
-        } while (!text.equals("dude, I´m out"));
+        } while (!text.equals("Dude, I´m out"));
         try {
             socket.close();
 
