@@ -53,7 +53,7 @@ public class UserThread extends Thread {
             socket.close();
 
             // warn that user is out
-            serverMessage = userName + " went out jacking off";
+            serverMessage = userName + " is out!";
             server.broadcast(serverMessage,this);
 
         } catch (IOException ex) {

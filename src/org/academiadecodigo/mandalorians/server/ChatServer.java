@@ -6,13 +6,6 @@ import java.net.Socket;
 import java.util.HashSet;
 import java.util.Set;
 
-//ChatServer class has two Set collections to keep track the
-// names and threads of the connected clients.
-// Set is used because it doesn’t allow duplication
-// and the order of elements does not matter
-
-//https://www.codejava.net/java-se/networking/how-to-create-a-chat-console-application-in-java-using-socket
-
 
 public class ChatServer {
     private static int port;
@@ -59,16 +52,6 @@ public class ChatServer {
             e.printStackTrace();
         }
     }
-
-   /* public static void main(String[] args) throws IOException {
-        *//*if (args.length < 1){
-            System.out.println("Syntax: java ChatServer <port-number>");
-            System.exit(0);
-        }*//*
-       // int port = Integer.parseInt(args[0]);
-        ChatServer server = new ChatServer(port);
-        server.execute();
-    }*/
 
     //delivers a message from one user to others (broadcasting)
     public void broadcast(String message, UserThread excludeUser){

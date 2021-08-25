@@ -11,21 +11,21 @@ import java.net.UnknownHostException;
 public class ChatClient {
 
     private static String hostname = "localhost";
-    private static int port=10;
+    private static int port = 10;
     private String userName = "GandaVieira";
 
-    public ChatClient(String hostname, int port){
+    public ChatClient(String hostname, int port) {
         this.hostname = hostname;
         this.port = port;
     }
 
-    private void execute(){
+    private void execute() {
         try {
             Socket socket = new Socket(hostname, port);
             System.out.println("Connected to the chat Server");
 
-            new ReadThread(socket,this);
-            new WriteThread(socket,this);
+            new ReadThread(socket, this);
+            new WriteThread(socket, this);
 
 
         } catch (UnknownHostException ex) {
@@ -35,19 +35,15 @@ public class ChatClient {
         }
     }
 
-    public void setUserName(String userName){
-        this.userName=userName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getUserName(){
+    public String getUserName() {
         return this.userName;
     }
 
     public static void main(String[] args) {
-       /* if (args.length<2) return;
-
-        String hostname = args[0];
-        int port = Integer.parseInt(args[1]);*/
 
         ChatClient client = new ChatClient(hostname, port);
         client.execute();
