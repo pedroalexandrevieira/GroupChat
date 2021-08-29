@@ -1,4 +1,4 @@
-package org.academiadecodigo.mandalorians.server;
+package org.academiadecodigo.mandalorians;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -8,33 +8,39 @@ import java.util.Set;
 
 
 public class ChatServer {
-    private static int port;
+    private static int port=8000;
     private Set<String> userNames;
     private Set<UserThread> userThreads;
+    public static final int DEFAULT_PORT = 8080;
+    ServerSocket serverSocket=null;
 
 
 
     public ChatServer(int port) {
         userNames = new HashSet<>();
         userThreads = new HashSet<>();
-        this.port = port;
+
     }
 
     public static void main(String[] args) throws IOException {
 
-        int port = Integer.parseInt(args[0]);
-
+        // exit application if no port number is specified
+        if (args.length == 0) {
+            System.out.println("Usage: java ChatServer [port]");
+            System.exit(1);
+        }
+        int port = args.length > 0 ? Integer.parseInt(args[0]) : DEFAULT_PORT;
         ChatServer server = new ChatServer(port);
-        server.execute();
+        server.execute(port);
 
     }
 
-    public void execute() throws IOException {
+    public void execute(int port) throws IOException {
 
-        //
+
         try {
             //wait for request of clients
-            ServerSocket serverSocket = new ServerSocket(port);
+            serverSocket = new ServerSocket(port);
             System.out.println("Chat Server is listening on port " + port);
 
             while (true) {

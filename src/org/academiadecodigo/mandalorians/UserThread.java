@@ -1,5 +1,7 @@
-package org.academiadecodigo.mandalorians.server;
+package org.academiadecodigo.mandalorians;
 
+
+import org.academiadecodigo.mandalorians.ChatServer;
 
 import java.io.*;
 import java.net.Socket;
