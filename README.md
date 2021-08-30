@@ -10,9 +10,8 @@ There can be multiple clients connect to a server and they can chat to each othe
 
 **Commands**
 
-`To run the Chat Server use the command "java ChatServer 8989"`
 
-`To run the Chat Client use the command "java ChatClient localhost 8989"`
+`To connect from the terminal use "nc IP/localhost 8080"`
 
 `To quit of the Chat use "Dude, I´m out"`
 
