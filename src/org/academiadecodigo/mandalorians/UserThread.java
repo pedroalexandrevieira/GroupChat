@@ -1,8 +1,5 @@
 package org.academiadecodigo.mandalorians;
 
-
-import org.academiadecodigo.mandalorians.ChatServer;
-
 import java.io.*;
 import java.net.Socket;
 
@@ -44,7 +41,7 @@ public class UserThread extends Thread {
 
             String clientMessage;
 
-            //Send message to users until they out(Dude, I´m out)
+            //Send message to users until they out ("I´m out dude")
             do {
                 clientMessage = reader.readLine();
                 serverMessage = "[" + userName + "]: " + clientMessage;

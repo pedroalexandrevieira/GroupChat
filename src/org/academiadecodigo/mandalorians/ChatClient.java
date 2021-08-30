@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-//type "dude, I´m out" in order to finish the program
+//type "I´m out dude" to finish the program
 public class ChatClient {
 
     private static String hostname = "localhost";

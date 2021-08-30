@@ -10,10 +10,13 @@ There can be multiple clients connect to a server and they can chat to each othe
 
 **Commands**
 
+`Run the class ChatServer`
 
-`To connect from the terminal use "nc IP/localhost 8080"`
+`Use the command "nc hostname/IpAddress 8080" in console to conected`
 
-`To quit of the Chat use "Dude, I´m out"`
+`The first word will be recorded as the name`
+
+`To quit of the Chat use "I´m out dude"`
 
 
 

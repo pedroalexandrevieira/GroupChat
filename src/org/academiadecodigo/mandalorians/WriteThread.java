@@ -1,7 +1,5 @@
 package org.academiadecodigo.mandalorians;
 
-import org.academiadecodigo.mandalorians.ChatClient;
-
 import java.io.Console;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -47,7 +45,7 @@ public class WriteThread {
         do {
             text = console.readLine("[" + userName + "]: ");
             writer.println(text);
-        } while (!text.equals("Dude, I´m out"));
+        } while (!text.equals("I´m out dude"));
         try {
             socket.close();
 
