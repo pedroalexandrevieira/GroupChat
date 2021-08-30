@@ -1,4 +1,4 @@
-package org.academiadecodigo.mandalorians.client;
+package org.academiadecodigo.mandalorians;
 
 //The ChatClient starts the client program,
 //connects to a server specified by hostname/IP address and port number.
@@ -11,7 +11,7 @@ import java.net.UnknownHostException;
 public class ChatClient {
 
     private static String hostname = "localhost";
-    private static int port = 10;
+    private static int port = 8080;
     private String userName = "GandaVieira";
 
     public ChatClient(String hostname, int port) {

@@ -1,4 +1,6 @@
-package org.academiadecodigo.mandalorians.client;
+package org.academiadecodigo.mandalorians;
+
+import org.academiadecodigo.mandalorians.ChatClient;
 
 import java.io.Console;
 import java.io.IOException;

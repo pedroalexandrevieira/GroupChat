@@ -6,6 +6,7 @@ There can be multiple clients connect to a server and they can chat to each othe
 **Technologies**
 
 `Java `
+`Netcat`
 
 **Commands**
 

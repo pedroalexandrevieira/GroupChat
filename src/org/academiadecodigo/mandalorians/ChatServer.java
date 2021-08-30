@@ -8,6 +8,7 @@ import java.util.Set;
 
 
 public class ChatServer {
+
     private static int port=8000;
     private Set<String> userNames;
     private Set<UserThread> userThreads;
@@ -19,16 +20,14 @@ public class ChatServer {
     public ChatServer(int port) {
         userNames = new HashSet<>();
         userThreads = new HashSet<>();
+        this.port=port;
 
     }
 
     public static void main(String[] args) throws IOException {
 
         // exit application if no port number is specified
-        if (args.length == 0) {
-            System.out.println("Usage: java ChatServer [port]");
-            System.exit(1);
-        }
+
         int port = args.length > 0 ? Integer.parseInt(args[0]) : DEFAULT_PORT;
         ChatServer server = new ChatServer(port);
         server.execute(port);
